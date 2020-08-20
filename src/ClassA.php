@@ -6,6 +6,6 @@ class ClassA
 {
     public function test()
     {
-        echo "Ici Class1::test() called\n<br>";
+        echo "Ici ClassA::test() called\n<br>";
     }
 }
