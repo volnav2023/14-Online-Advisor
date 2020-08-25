@@ -8,7 +8,7 @@ class User
     {
         echo "Ici User::test() called";
     }
-    public function Create()
+    public function Create($MailAddress,$Password)
     {
         ;
     }

@@ -15,3 +15,9 @@ echo 'Ici index.php<br>';
 
 $dbase1 = new Dbase();
 $dbase1->open('localhost', '14-online-advisor', 'root','');
+$dbase1->query();
+$dbase2 = new Dbase();
+$dbase2->open('localhost', '14-one-advisor', 'root','', 1);
+$dbase1->query();
+$dbase2->query();
+$dbase1->conn;

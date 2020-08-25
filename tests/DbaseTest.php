@@ -7,7 +7,14 @@ use App\Dbase;
 
 final class DbaseTest extends TestCase
 {
-    public function testConnectOk()
+    public function testOpen()
+    {
+        $this->expectOutputString('Dbase connected successfully');
+        $dbase1 = new Dbase();
+        $dbase1->open('localhost', '14-online-advisor', 'root','');
+    }
+
+    public function testQuery()
     {
         $this->expectOutputString('Dbase connected successfully');
         $dbase1 = new Dbase();
