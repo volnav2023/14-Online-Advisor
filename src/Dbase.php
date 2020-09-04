@@ -18,13 +18,13 @@ class Dbase
             echo "Connection failed: " . $e->getMessage();
         }
     }
-    public function query()
+    public function query($sqlQuery)
     {
         $count = '10';
         $sql = "INSERT INTO `user`(`MailAddress`, `Password`, `LastLogTimeStamp`) VALUES ('" . $count . "@flechet.com', '" . $count . "pwd','1000-01-01 00:00:00')";
-        echo $sql . "<br>";
+        echo $sqlQuery . "<br>";
 
-        $this->conn->query($sql);
+        $this->conn->query($sqlQuery);
 
         $sql = 'SELECT * FROM `user` WHERE 1';
 
